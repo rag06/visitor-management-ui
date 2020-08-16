@@ -1,0 +1,11 @@
+<div class="login d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-lg-8 mx-auto">
+          <h3 class="login-heading mb-4">Visitor Managment System</h3>
+          {{visitorCheckinService?.visitorProfile | json}}
+          <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" (click)="checkIn()">Check In</button>
+        </div>
+      </div>
+    </div>
+  </div>

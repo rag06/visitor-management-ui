@@ -1,0 +1,20 @@
+<div class="login d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-lg-8 mx-auto">
+          <h3 class="login-heading mb-4">Visitor Managment System</h3>
+            <ngb-alert [type]="'danger'" *ngIf="otpValidationFailed" (close)="otpValidationFailed=false">Invalid OTP</ngb-alert>
+            <p>Mobile Number : {{visitorCheckinService?.visitorProfile?.mobile}}</p>
+            <form [formGroup]="verifyPageForm" (ngSubmit)="onSubmit()">
+            
+            <div class="form-label-group">
+              <input type="text" id="inputEmail" formControlName="otp" class="form-control" placeholder="Enter Your Verification Code" required autofocus>
+              <label for="inputEmail">Verification Code</label>
+            </div>
+            <button [disabled]="!verifyPageForm.valid" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Verify</button>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

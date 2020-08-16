@@ -1,0 +1,16 @@
+<div class="login d-flex align-items-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 col-lg-8 mx-auto">
+          <h3 class="login-heading mb-4">Visitor Managment System</h3>
+          <form [formGroup]="homePageForm" (ngSubmit)="onSubmit()">
+            <div class="form-label-group">
+              <input type="text" id="inputEmail" formControlName="mobile" class="form-control" placeholder="Enter Your Mobile Number" required autofocus>
+              <label for="inputEmail">Mobile Number</label>
+            </div>
+            <button [disabled]="!homePageForm.valid" class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Request OTP</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
